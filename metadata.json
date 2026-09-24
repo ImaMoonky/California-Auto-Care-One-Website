@@ -1,0 +1,6 @@
+{
+  "name": "California Auto Care One - Concierge Auto Body & Restoration",
+  "description": "Oakland's premier auto body, undetectable collision repair, vintage restoration, and full service mechanical atelier.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
