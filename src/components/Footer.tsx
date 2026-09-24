@@ -23,22 +23,22 @@ export const Footer: React.FC = () => {
 
         {/* Action Buttons */}
         <div className="flex items-center gap-3 pt-1">
-          <button
-            type="button"
-            onClick={(e) => e.preventDefault()}
-            className="px-4 py-2 rounded-full bg-white border border-stone-200 text-stone-800 text-xs font-bold flex items-center gap-1.5 hover:bg-stone-50 shadow-xs transition-colors cursor-pointer"
+          <a
+            href="tel:5105001018"
+            className="px-5 py-2.5 rounded-full bg-white border border-stone-200 text-stone-800 text-xs sm:text-sm font-bold flex items-center gap-2 hover:bg-stone-50 active:scale-95 shadow-xs transition-all cursor-pointer"
           >
-            <Phone className="w-3.5 h-3.5 text-[#8b1e1e]" />
+            <Phone className="w-4 h-4 text-[#8b1e1e]" />
             <span>(510) 500-1018</span>
-          </button>
-          <button
-            type="button"
-            onClick={(e) => e.preventDefault()}
-            className="px-4 py-2 rounded-full bg-white border border-stone-200 text-stone-800 text-xs font-bold flex items-center gap-1.5 hover:bg-stone-50 shadow-xs transition-colors cursor-pointer"
+          </a>
+          <a
+            href="https://maps.google.com/?q=California+Auto+Care+One+Oakland+CA"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-5 py-2.5 rounded-full bg-white border border-stone-200 text-stone-800 text-xs sm:text-sm font-bold flex items-center gap-2 hover:bg-stone-50 active:scale-95 shadow-xs transition-all cursor-pointer"
           >
-            <Navigation className="w-3.5 h-3.5 text-[#8b1e1e]" />
+            <Navigation className="w-4 h-4 text-[#8b1e1e]" />
             <span>Directions</span>
-          </button>
+          </a>
         </div>
 
         {/* Quiet Legal Copyright */}

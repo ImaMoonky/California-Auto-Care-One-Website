@@ -55,14 +55,15 @@ export const LocationHours: React.FC = () => {
                 Oakland, CA 94601 (Fruitvale &amp; San Antonio District)
               </span>
             </div>
-            <button
-              type="button"
-              onClick={(e) => e.preventDefault()}
-              className="px-4 py-2.5 rounded-full bg-[#8b1e1e] hover:bg-[#a52626] text-white text-xs font-bold flex items-center gap-1.5 shadow-sm transition-all self-start sm:self-auto cursor-pointer"
+            <a
+              href="https://maps.google.com/?q=California+Auto+Care+One+Oakland+CA"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-5 py-3 rounded-full bg-[#8b1e1e] hover:bg-[#a52626] text-white text-sm font-bold flex items-center gap-2 shadow-sm transition-all self-start sm:self-auto cursor-pointer"
             >
-              <span>Open Maps</span>
-              <ExternalLink className="w-3.5 h-3.5" />
-            </button>
+              <span>Get Directions</span>
+              <ExternalLink className="w-4 h-4" />
+            </a>
           </div>
 
           {/* Hours Table */}
@@ -83,22 +84,22 @@ export const LocationHours: React.FC = () => {
 
           {/* Action Buttons Row */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-            <button
-              type="button"
-              onClick={(e) => e.preventDefault()}
-              className="bg-stone-100 hover:bg-stone-200/80 p-3 rounded-xl text-center text-xs sm:text-sm font-bold text-stone-900 transition-colors flex items-center justify-center gap-2 cursor-pointer"
+            <a
+              href="tel:5105001018"
+              className="bg-stone-100 hover:bg-stone-200/80 active:bg-stone-300/80 py-3.5 px-4 rounded-xl text-center text-sm font-bold text-stone-900 transition-colors flex items-center justify-center gap-2.5 cursor-pointer shadow-xs"
             >
-              <Phone className="w-4 h-4 text-[#8b1e1e]" />
-              <span>Call Shop</span>
-            </button>
-            <button
-              type="button"
-              onClick={(e) => e.preventDefault()}
-              className="bg-stone-100 hover:bg-stone-200/80 p-3 rounded-xl text-center text-xs sm:text-sm font-bold text-stone-900 transition-colors flex items-center justify-center gap-2 cursor-pointer"
+              <Phone className="w-4.5 h-4.5 text-[#8b1e1e]" />
+              <span>Call (510) 500-1018</span>
+            </a>
+            <a
+              href="https://maps.google.com/?q=California+Auto+Care+One+Oakland+CA"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-stone-100 hover:bg-stone-200/80 active:bg-stone-300/80 py-3.5 px-4 rounded-xl text-center text-sm font-bold text-stone-900 transition-colors flex items-center justify-center gap-2.5 cursor-pointer shadow-xs"
             >
-              <Mail className="w-4 h-4 text-[#8b1e1e]" />
-              <span>Email Us</span>
-            </button>
+              <ExternalLink className="w-4.5 h-4.5 text-[#8b1e1e]" />
+              <span>Directions &amp; Map</span>
+            </a>
           </div>
         </div>
       </div>

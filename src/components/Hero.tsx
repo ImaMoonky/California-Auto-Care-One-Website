@@ -24,16 +24,16 @@ export const Hero: React.FC = () => {
       <div className="block md:hidden bg-white p-3 sm:p-4">
         <div className="w-full bg-[#131418] rounded-3xl overflow-hidden border border-white/10 shadow-2xl">
           
-          {/* Top Visual Area with workshop image and smooth fade */}
-          <div className="relative w-full h-64 sm:h-72 overflow-hidden">
+          {/* Top Visual Area with workshop image and smooth fade - trimmed ~1/8 to reduce vertical footprint */}
+          <div className="relative w-full h-56 sm:h-64 overflow-hidden">
             <img
               src={heroBg}
               alt="California Auto Care One - Oakland Shop"
-              className="w-full h-full object-cover object-[50%_35%] block"
+              className="w-full h-full object-cover object-[50%_25%] block"
               loading="eager"
             />
             {/* Top dark subtle gradient for badge clarity */}
-            <div className="absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-black/60 to-transparent pointer-events-none" />
+            <div className="absolute inset-x-0 top-0 h-14 bg-gradient-to-b from-black/60 to-transparent pointer-events-none" />
 
             {/* Pill Badge at the top */}
             <div className="absolute top-3 left-1/2 -translate-x-1/2 w-max max-w-[92%] z-10 pointer-events-none">
@@ -44,7 +44,7 @@ export const Hero: React.FC = () => {
             </div>
 
             {/* Smooth bottom fade into dark card background */}
-            <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[#131418] via-[#131418]/75 to-transparent pointer-events-none" />
+            <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-[#131418] via-[#131418]/75 to-transparent pointer-events-none" />
           </div>
 
           {/* Card Content Area */}
@@ -63,37 +63,14 @@ export const Hero: React.FC = () => {
               Undetectable collision repair, master vintage metalcraft &amp; direct insurance claim handling. Built on transparency.
             </p>
 
-            {/* Primary Action Button: Book Online & Save $20 (Commented out - will return with new app) */}
-            {/*
-            <button
-              type="button"
-              onClick={handleScrollToServices}
-              className="w-full bg-[#8c2222] hover:bg-[#a12828] active:scale-[0.99] text-white p-3 rounded-2xl flex items-center justify-between shadow-lg shadow-red-950/40 transition-all mb-2.5 cursor-pointer select-none"
-            >
-              <div className="flex items-center gap-2.5">
-                <div className="w-9 h-9 rounded-xl bg-black/20 flex items-center justify-center shrink-0">
-                  <Calendar className="w-4.5 h-4.5 text-white" />
-                </div>
-                <div className="text-left leading-tight">
-                  <div className="text-xs font-bold text-white">Book Online &amp; Save</div>
-                  <div className="text-sm sm:text-base font-extrabold text-white">$20</div>
-                </div>
-              </div>
-              <div className="bg-[#591414] px-2.5 py-1.5 rounded-xl flex items-center gap-1.5 text-[10.5px] font-black uppercase tracking-wider text-white">
-                <span>INSTANT</span>
-                <ArrowRight className="w-3.5 h-3.5" />
-              </div>
-            </button>
-            */}
-
-            {/* Secondary Action Buttons Row: Compact single-line inline fit */}
-            <div className="grid grid-cols-2 gap-2">
+            {/* Action Buttons Row: Bigger and more comfortable touch targets */}
+            <div className="grid grid-cols-2 gap-3 mt-1">
               <a
                 href="tel:5105001018"
-                className="flex items-center justify-center gap-2 bg-[#1f2128] hover:bg-[#282a33] text-white py-2.5 px-2 rounded-xl border border-white/5 active:scale-95 transition-all shadow-sm"
+                className="flex items-center justify-center gap-2.5 bg-[#1f2128] hover:bg-[#2a2d37] active:bg-[#323642] text-white py-3.5 px-3 rounded-2xl border border-white/10 active:scale-[0.98] transition-all shadow-md group"
               >
-                <Phone className="w-3.5 h-3.5 text-stone-300 shrink-0" />
-                <span className="text-white font-bold text-xs whitespace-nowrap tracking-tight">
+                <Phone className="w-4.5 h-4.5 text-red-400 group-hover:text-red-300 transition-colors shrink-0" />
+                <span className="text-white font-bold text-sm sm:text-[15px] whitespace-nowrap tracking-tight">
                   (510) 500-1018
                 </span>
               </a>
@@ -101,10 +78,10 @@ export const Hero: React.FC = () => {
                 href="https://maps.google.com/?q=California+Auto+Care+One+Oakland+CA"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center gap-1.5 bg-[#1f2128] hover:bg-[#282a33] text-white py-2.5 px-2 rounded-xl border border-white/5 active:scale-95 transition-all font-bold text-xs shadow-sm"
+                className="flex items-center justify-center gap-2 bg-[#1f2128] hover:bg-[#2a2d37] active:bg-[#323642] text-white py-3.5 px-3 rounded-2xl border border-white/10 active:scale-[0.98] transition-all font-bold text-sm sm:text-[15px] shadow-md group"
               >
-                <Navigation className="w-3.5 h-3.5 text-stone-300 shrink-0" />
-                <span className="text-white">Directions</span>
+                <Navigation className="w-4.5 h-4.5 text-red-400 group-hover:text-red-300 transition-colors shrink-0" />
+                <span className="text-white tracking-tight">Directions</span>
               </a>
             </div>
 
@@ -182,28 +159,15 @@ export const Hero: React.FC = () => {
               </div>
             </h1>
 
-            {/* Stylized Action Buttons - Stacked Vertically */}
-            <div className="mt-3 sm:mt-4 ml-1 sm:ml-2 flex flex-col items-start gap-2 sm:gap-2.5 pointer-events-auto">
-              {/* Primary CTA: Book Online & Save $20 (Commented out - will return with new app) */}
-              {/*
-              <button
-                type="button"
-                onClick={handleScrollToServices}
-                className="group flex items-center gap-2 bg-[#8c2222] hover:bg-[#a12828] active:scale-95 text-white py-2 px-4 rounded-xl shadow-lg shadow-black/70 transition-all cursor-pointer font-jakarta font-bold text-xs sm:text-sm select-none border border-red-400/25"
-              >
-                <Calendar className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-white shrink-0" />
-                <span>Book Online &amp; Save $20</span>
-                <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform shrink-0" />
-              </button>
-              */}
-
+            {/* Stylized Action Buttons - Made bigger and prominent */}
+            <div className="mt-4 sm:mt-5 ml-1 flex flex-wrap items-center gap-3 sm:gap-4 pointer-events-auto">
               {/* Phone CTA */}
               <a
                 href="tel:5105001018"
-                className="flex items-center gap-2 bg-black/75 hover:bg-black/90 active:scale-95 text-white py-1.5 sm:py-2 px-3.5 sm:px-4 rounded-xl border border-white/15 backdrop-blur-sm shadow-md shadow-black/50 transition-all cursor-pointer font-jakarta font-semibold text-xs sm:text-sm"
+                className="group flex items-center gap-2.5 bg-black/85 hover:bg-black active:scale-95 text-white py-2.5 sm:py-3.5 px-5 sm:px-6 rounded-2xl border border-white/20 backdrop-blur-md shadow-xl shadow-black/70 transition-all cursor-pointer font-jakarta font-bold text-sm sm:text-base select-none"
               >
-                <Phone className="w-3.5 h-3.5 text-stone-300 shrink-0" />
-                <span>(510) 500-1018</span>
+                <Phone className="w-4 h-4 sm:w-5 sm:h-5 text-red-400 group-hover:text-red-300 transition-colors shrink-0" />
+                <span className="tracking-tight">(510) 500-1018</span>
               </a>
 
               {/* Get Directions CTA */}
@@ -211,10 +175,10 @@ export const Hero: React.FC = () => {
                 href="https://maps.google.com/?q=California+Auto+Care+One+Oakland+CA"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 bg-black/75 hover:bg-black/90 active:scale-95 text-white py-1.5 sm:py-2 px-3.5 sm:px-4 rounded-xl border border-white/15 backdrop-blur-sm shadow-md shadow-black/50 transition-all cursor-pointer font-jakarta font-semibold text-xs sm:text-sm"
+                className="group flex items-center gap-2.5 bg-black/85 hover:bg-black active:scale-95 text-white py-2.5 sm:py-3.5 px-5 sm:px-6 rounded-2xl border border-white/20 backdrop-blur-md shadow-xl shadow-black/70 transition-all cursor-pointer font-jakarta font-bold text-sm sm:text-base select-none"
               >
-                <Navigation className="w-3.5 h-3.5 text-stone-300 shrink-0" />
-                <span>Get Directions</span>
+                <Navigation className="w-4 h-4 sm:w-5 sm:h-5 text-red-400 group-hover:text-red-300 transition-colors shrink-0" />
+                <span className="tracking-tight">Get Directions</span>
               </a>
             </div>
           </div>

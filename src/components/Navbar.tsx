@@ -44,14 +44,14 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigate }) => {
           <a
             href="tel:5105001018"
             aria-label="Call Shop"
-            className="w-9 h-9 rounded-full bg-stone-200/90 flex items-center justify-center text-[#1b1c1a] active:scale-95 transition-transform"
+            className="w-10 h-10 rounded-full bg-stone-200/90 hover:bg-stone-300 flex items-center justify-center text-[#1b1c1a] active:scale-95 transition-all shadow-xs"
           >
-            <Phone className="w-4 h-4" />
+            <Phone className="w-4.5 h-4.5 text-[#8b1e1e]" />
           </a>
           <button
             type="button"
             onClick={() => handleNavClick('services')}
-            className="flex items-center gap-1 px-3 py-1.5 rounded-full bg-[#fde8e8] text-[#8b1e1e] text-xs font-bold border border-[#f8b4b4]/60 active:scale-95 transition-transform"
+            className="flex items-center gap-1.5 px-3.5 py-2 rounded-full bg-[#fde8e8] text-[#8b1e1e] text-xs font-bold border border-[#f8b4b4]/60 active:scale-95 transition-transform"
           >
             <Shield className="w-3.5 h-3.5 fill-current" />
             <span>Status</span>
@@ -134,10 +134,10 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigate }) => {
           {/* Call button with painted red capsule */}
           <a
             href="tel:5105001018"
-            className="relative group px-4 sm:px-6 py-2 sm:py-2.5 rounded-full bg-[#6e1313] hover:bg-[#801818] active:scale-[0.98] text-white font-extrabold text-xs sm:text-sm tracking-wider uppercase shadow-[0_2px_8px_rgba(110,19,19,0.4)] transition-all cursor-pointer flex items-center gap-2"
+            className="relative group px-5 sm:px-6 py-2.5 sm:py-3 rounded-full bg-[#6e1313] hover:bg-[#801818] active:scale-[0.98] text-white font-extrabold text-xs sm:text-sm tracking-wider uppercase shadow-[0_2px_8px_rgba(110,19,19,0.4)] transition-all cursor-pointer flex items-center gap-2"
             style={{ fontFamily: "'Oswald', sans-serif" }}
           >
-            <Phone className="w-3.5 h-3.5 fill-current shrink-0" />
+            <Phone className="w-4 h-4 fill-current shrink-0" />
             <span className="tracking-[0.08em] whitespace-nowrap">
               CALL (510) 500-1018
             </span>
